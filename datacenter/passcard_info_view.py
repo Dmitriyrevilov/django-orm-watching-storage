@@ -8,14 +8,7 @@ def passcard_info_view(request, passcode):
     # Программируем здесь
 
     this_passcard_visits = [
-        {
-            'entered_at': '11-04-2018',
-            'duration': '25:03',
-            'is_strange': False
-        },
+        {"entered_at": "11-04-2018", "duration": "25:03", "is_strange": False},
     ]
-    context = {
-        'passcard': passcard,
-        'this_passcard_visits': this_passcard_visits
-    }
-    return render(request, 'passcard_info.html', context)
+    context = {"passcard": passcard, "this_passcard_visits": this_passcard_visits}
+    return render(request, "passcard_info.html", context)
