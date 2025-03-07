@@ -23,14 +23,5 @@ class Visit(models.Model):
         return "{user} entered at {entered} {leaved}".format(
             user=self.passcard.owner_name,
             entered=self.entered_at,
-            leaved=(f"leaved at {self.leaved_at}" if self.leaved_at else "not leaved"),
+            leaved=(f"leaved at {self.leaved_at}" if self.leaved_at else "not_eaved"),
         )
-
-    # def get_duration(visit):
-    #     print("Находится в хранилище:", localtime() - visit.entered_at)
-    #     return 0
-
-    # def format_duration(duration):
-    #     visit = Visit.objects.all()[0]
-    #     duration = get_duration(visit)
-    #     print(format_duration(duration))
