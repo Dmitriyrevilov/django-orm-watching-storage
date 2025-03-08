@@ -1,5 +1,5 @@
-from .models import Visit
-import localtime
+from django.utils.timezone import localtime
+
 
 
 def get_duration(visit):

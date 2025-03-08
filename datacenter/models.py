@@ -23,5 +23,5 @@ class Visit(models.Model):
         return "{user} entered at {entered} {leaved}".format(
             user=self.passcard.owner_name,
             entered=self.entered_at,
-            leaved=(f"leaved at {self.leaved_at}" if self.leaved_at else "not_eaved"),
+            leaved=(f"leaved at {self.leaved_at}" if self.leaved_at else "not leaved"),
         )

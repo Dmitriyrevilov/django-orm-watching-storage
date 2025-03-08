@@ -1,22 +1,20 @@
-from datacenter.models import Passcard
 from datacenter.models import Visit
 from django.shortcuts import render
-from datacenter.get_duration import get_duration, format_duration, is_visit_long
+from datacenter.get_duration import get_duration, format_duration
 
 
 def storage_information_view(request):
-    # Программируем здесь
-    for visit in Visit.objects.filter(leaved_at=None):  # перебрали тех кто не вышел
+    for visit in Visit.objects.filter(leaved_at=None):
         non_closed_visits = [
             {
-                "who_entered": visit.passcard.owner_name,  # получили имя
-                "entered_at": visit.entered_at,  # получили время входа
+                "who_entered": visit.passcard.owner_name,
+                "entered_at": visit.entered_at,  
                 "duration": format_duration(
                     get_duration(visit)
-                ),  # получили время нахождения в хранилище
+                )
             }
         ]
     context = {
-        "non_closed_visits": non_closed_visits,  # не закрытые посещения
+        "non_closed_visits": non_closed_visits
     }
     return render(request, "storage_information.html", context)
