@@ -8,10 +8,10 @@ LONG_VISIT_THRESHOLD_SECONDS = 600
 def get_duration(visit):
     time_now = localtime()
     if visit.leaved_at:
-        time_in_storage = time_now - visit.entered_at
+        time_in_storage = visit.leaved_at - visit.entered_at
         return time_in_storage
     else:
-        time_in_storage = visit.leaved_at - visit.entered_at
+        time_in_storage = time_now - visit.entered_at
         return time_in_storage
 
 
