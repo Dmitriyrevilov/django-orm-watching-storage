@@ -1,2 +1,21 @@
+# Environments
 .env
 venv
+
+__pycache__/
+
+
+# Distribution / packaging
+.idea/
+
+
+
+# Logs and databases
+*.pyc
+*.pyd
+*.pyo
+
+# IDEs and code editors
+.vscode/*
+Thumbs.db
+.DS_Store
