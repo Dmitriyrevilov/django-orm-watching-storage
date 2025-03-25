@@ -1,7 +1,7 @@
 # Environments
 .env
 /venv/*
-__pycache__
+__pycache__/
 
 
 # Distribution / packaging
@@ -18,5 +18,5 @@ __pycache__
 .vscode/*
 Thumbs.db
 .DS_Store
-.replit/*
+*.replit
 poetry.lock
